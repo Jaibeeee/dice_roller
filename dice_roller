@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Dice Roller</title>
+	
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- minify -->
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <!-- latest -->
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <!-- core style only -->
+    <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class = "container">
+    
+    <img src="images/Dice-Roller Logo.png" alt="dice roller logo" class="logo">
+    
+    <div class="container-md control-container">
+
+        <div class="nes-container is-rounded">
+
+            <div class="container-sm">
+
+                <div class="row">
+                    <div class="col-md"> 
+                        <div class="nes-field">
+                            <label for="roll-Number">Number of Rolls:</label>  
+                            <input name="Number of Rolls" type="number" class="nes-input" id="roll-Number" value ="1">
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <div class="nes-field">
+                            <label for="projiciency-Modifier">Modifer:</label>
+                            <input name="Proficiency Modifer" type="number" class="nes-input" id="proficiency-Modifer" value = "0">
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                    <div class="button-center">
+                        <button type= "button" class="nes-btn" value="d4" onclick='rollTheDice(4)'>d4</button>
+                        <button type= "button" class="nes-btn" value="d6" onclick='rollTheDice(6)'>d6</button>
+                        <button type= "button" class="nes-btn" value="d8" onclick='rollTheDice(8)'>d8</button>
+                        <button type= "button" class="nes-btn" value="d10" onclick='rollTheDice(10)'>d10</button>
+                        <button type= "button" class="nes-btn" value="d12" onclick='rollTheDice(12)'>d12</button>
+                        <button type= "button" class="nes-btn" value="d20" onclick='rollTheDice(20)'>d20</button>
+                        <button type= "button" class="nes-btn" value="d100" onclick='rollTheDice(100)'>d100</button>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                    <div id="yourRollTotal">
+                        <h5> Your roll! </h5>
+                        <h4 id="output"></h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="yourRolls"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="nes-container is-rounded" id="rollHistory">
+            <h5>Roll History</h5>
+        </div>
+
+    </div>
+</div>
+  <script src="script.js"></script>
+  
+</body>
+</html>  
